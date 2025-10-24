@@ -1,0 +1,13 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+header { background-color: #4CAF50; color: white; text-align: center; padding: 20px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.products { display: flex; flex-wrap: wrap; justify-content: center; }
+.product { background: white; margin: 10px; padding: 15px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 200px; text-align: center; }
+button { background-color: #4CAF50; color: white; border: none; padding: 8px 12px; cursor: pointer; margin: 5px; }
+button:hover { background-color: #45a049; }
+.delete-btn { background-color: #f44336; }
+.edit-btn { background-color: #ff9800; }
+#cart { position: fixed; top: 10px; right: 10px; background: white; padding: 10px; border: 1px solid #ccc; width: 250px; }
+#product-form { display: none; background: white; padding: 20px; margin: 20px 0; border: 1px solid #ccc; }
+input, select { display: block; margin: 10px 0; padding: 8px; width: 100%; }
+#filter { margin-bottom: 20px; }
