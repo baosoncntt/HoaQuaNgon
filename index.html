@@ -1,16 +1,20 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cửa Hàng Rau Quả Tươi</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css"> <!-- Liên kết đến file CSS -->
 </head>
 <body>
     <header>
         <h1>Chào mừng đến với Cửa Hàng Rau Quả Tươi</h1>
         <p>Rau quả tươi ngon, giá rẻ!</p>
-        <button onclick="showForm()">Thêm Sản Phẩm Mới</button>
+        <div id="auth-controls">
+            <!-- Nút Đăng nhập/Đăng xuất và trạng thái sẽ được thêm bởi JS -->
+            <div id="auth-status" style="font-size: 0.9em; margin-bottom: 10px;"></div>
+            <button id="add-product-btn" onclick="showForm()">Thêm Sản Phẩm Mới</button>
+        </div>
     </header>
     
     <div class="container">
@@ -23,7 +27,7 @@
             </select>
         </div>
         
-        <div id="product-form">
+        <div id="product-form" style="display: none;">
             <h3>Thêm/Sửa Sản Phẩm</h3>
             <input type="text" id="product-name" placeholder="Tên sản phẩm">
             <input type="number" id="product-price" placeholder="Giá (VND)">
@@ -31,7 +35,7 @@
                 <option value="Rau">Rau</option>
                 <option value="Quả">Quả</option>
             </select>
-            <input type="file" id="product-image" accept="images/*">
+            <input type="file" id="product-image" accept="image/*">
             <button onclick="saveProduct()">Lưu</button>
             <button onclick="hideForm()">Hủy</button>
         </div>
@@ -43,10 +47,16 @@
     
     <div id="cart">
         <h4>Giỏ hàng</h4>
-        <ul id="cart-items"></ul>
+        <ul id="cart-items">
+            <!-- Items giỏ hàng -->
+        </ul>
         <p>Tổng: <span id="total">0</span> VND</p>
     </div>
+
+    <footer>
+        <!-- User ID sẽ được hiển thị tại đây -->
+    </footer>
     
-    <script src="script.js"></script> <!-- Liên kết đến file JS -->
+    <script type="module" src="script.js"></script>
 </body>
 </html>
